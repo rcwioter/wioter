@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>番茄叶片病害检测可视化</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div>
+        <p class="eyebrow">YOLOv8 + CBAM 复杂环境检测</p>
+        <h1>番茄叶片病害目标检测系统</h1>
+        <p class="subtitle">
+          支持复杂光照、遮挡与背景场景的可视化检测与病害统计分析。
+        </p>
+      </div>
+      <div class="hero-card">
+        <h2>检测流程</h2>
+        <ol>
+          <li>上传叶片图像</li>
+          <li>YOLOv8 识别病斑</li>
+          <li>实时标注与统计</li>
+        </ol>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="panel">
+        <h2>上传图像</h2>
+        <p class="muted">支持 JPG / PNG 格式，建议分辨率 ≥ 640px。</p>
+        <form id="upload-form">
+          <input type="file" name="image" id="image" accept="image/*" required />
+          <button type="submit">开始检测</button>
+        </form>
+        <div class="status" id="status">等待上传。</div>
+      </section>
+
+      <section class="panel">
+        <h2>检测结果</h2>
+        <div class="canvas-wrapper">
+          <img id="preview" alt="检测预览" />
+          <canvas id="overlay"></canvas>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>病害统计</h2>
+        <div class="stats" id="stats">
+          <p class="muted">检测完成后显示各病害数量。</p>
+        </div>
+        <div class="legend" id="legend"></div>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
