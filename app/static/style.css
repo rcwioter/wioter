@@ -1,0 +1,180 @@
+:root {
+  color-scheme: light;
+  --primary: #1c7c54;
+  --secondary: #f4f7f2;
+  --accent: #f59f00;
+  --text: #1c1c1c;
+  --muted: #5f6b6b;
+  --border: #e2e6e3;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Noto Sans", "PingFang SC", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0 4vw 4vw;
+  background: #f9faf9;
+  color: var(--text);
+}
+
+.hero {
+  margin: 3vw 0 2vw;
+  padding: 2.5vw 3vw;
+  background: linear-gradient(120deg, #ffffff, #eef7f1);
+  border-radius: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2vw;
+  box-shadow: 0 20px 40px rgba(28, 124, 84, 0.08);
+}
+
+.hero h1 {
+  margin: 0.4rem 0 0.6rem;
+  font-size: 2.4rem;
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.75rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+}
+
+.hero-card {
+  background: #ffffff;
+  padding: 1.6rem 2rem;
+  border-radius: 18px;
+  min-width: 220px;
+  border: 1px solid var(--border);
+}
+
+.hero-card h2 {
+  margin-top: 0;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.6rem;
+}
+
+.panel {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 1.6rem;
+  border: 1px solid var(--border);
+  min-height: 320px;
+}
+
+.panel h2 {
+  margin-top: 0;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+button {
+  background: var(--primary);
+  color: #ffffff;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #166542;
+}
+
+.status {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  background: var(--secondary);
+  color: var(--muted);
+}
+
+.canvas-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 240px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px dashed var(--border);
+  background: #f8faf7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.canvas-wrapper img {
+  max-width: 100%;
+  display: none;
+}
+
+#overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.stats {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.stat-card {
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--secondary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.legend {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+}
+
+@media (max-width: 720px) {
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

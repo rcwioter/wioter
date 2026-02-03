@@ -1,0 +1,10 @@
+# YOLOv8 detection dataset config (update paths to your dataset)
+path: data/processed/plantvillage_det
+train: images/train
+val: images/val
+
+names:
+  0: early_blight
+  1: late_blight
+  2: leaf_mold
+  3: septoria_leaf_spot
